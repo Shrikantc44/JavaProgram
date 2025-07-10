@@ -1,0 +1,18 @@
+-- Create a database
+CREATE DATABASE codesquadz14;
+
+-- (In MySQL CLI, use this command to switch to the database)
+USE codesquadz14;
+
+-- Create a user
+CREATE USER 'codesquadz15'@'localhost' IDENTIFIED BY 'codesquadz15';
+
+-- Grant all privileges to the user
+GRANT ALL PRIVILEGES ON *.* TO 'codesquadz15'@'localhost' WITH GRANT OPTION;
+
+-- Another user
+CREATE USER 'estore'@'localhost' IDENTIFIED BY 'estore';
+GRANT ALL PRIVILEGES ON *.* TO 'estore'@'localhost' WITH GRANT OPTION;
+
+-- Apply changes
+FLUSH PRIVILEGES;
