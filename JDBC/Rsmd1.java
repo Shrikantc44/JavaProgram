@@ -8,7 +8,8 @@ public class Rsmd1
 {
 	public static void main(String args[]) throws Exception
 	{
-		Connection conn = getOracleConnection(); // getOracleConnection method is called
+		 // getOracleConnection method is called
+		 Connection conn = getOracleConnection();
 
 		Statement st = conn.createStatement();  //Statement object created using createStatement method
 		st.executeUpdate("drop table survey");  //if survey table is already exist then it is deleted using drop statement
