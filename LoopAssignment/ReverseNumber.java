@@ -1,5 +1,3 @@
-//Write a program that prompts the user to input an integer and then outputs the number with the digit reversed.
-
 import java.util.Scanner;
 public class ReverseNumber
 {

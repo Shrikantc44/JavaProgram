@@ -1,7 +1,8 @@
 /*The example uses the ArrayBlockingQueue implementation of the BlockingQueue interface.
 
 The BlockingQueueExample class starts a Producer and a Consumer in separate threads.
-The Producer inserts strings into a shared BlockingQueue while the Consumer takes them out.*/
+The Producer inserts strings into a shared BlockingQueue while the Consumer takes them out.
+*/
 
 import java.util.concurrent.*;
 

@@ -39,8 +39,8 @@ class DatabaseCreator {
 
             createSchoolTables(conn);
             createHospitalTables(conn);
-            //createLibraryTables(conn);
-            //createCompanyTables(conn);
+            createLibraryTables(conn);
+            createCompanyTables(conn);
 
             conn.close();
         } catch (Exception e) {
