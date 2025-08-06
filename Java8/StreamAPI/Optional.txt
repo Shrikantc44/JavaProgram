@@ -1,0 +1,42 @@
+Optional is a way of replacing a nullable T reference with a non-null value. An Optional may
+either contain a non-null T reference (in which case we say the reference is "present"), or
+it may contain nothing (in which case we say the reference is "absent").
+
+    Remember that it is never said that optional "contain null".
+
+Optional<Integer> canBeEmpty1 = Optional.of(5);
+canBeEmpty1.isPresent();                 // returns true
+canBeEmpty1.get();                       // returns 5
+
+Optional<Integer> canBeEmpty2 = Optional.empty();
+canBeEmpty2.isPresent();                 // returns false
+
+You can also view Optional as a single-value container that either contains a value or
+doesn't.
+Creating Optional objects
+
+There are 3 major ways to create an Optional.
+
+i) Use Optional.empty() to create empty optional.
+Optional<Integer> possible = Optional.empty();
+
+ii) Use Optional.of() to create optional with default non-null value. If you pass null in
+of(), then a NullPointerException is thrown immediately.
+Optional<Integer> possible = Optional.of(5);
+
+iii) Use Optional.ofNullable() to create an Optional object that may hold a null value. If
+parameter is null, the resulting Optional object would be empty (remember that value is
+absent; don't read it null).
+Optional<Integer> possible = Optional.ofNullable(null);
+//or
+Optional<Integer> possible = Optional.ofNullable(5);
+
+b) Do something If Optional value is present
+
+You got your Optional object is first step. Now let's use it after checking whether it holds
+any value inside it.
+Optional<Integer> possible = Optional.of(5);
+possible.ifPresent(System.out::println);
+if(possible.isPresent()){
+    System.out.println(possible.get());
+}

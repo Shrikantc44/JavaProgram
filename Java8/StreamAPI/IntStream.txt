@@ -1,0 +1,64 @@
+the static methods in the Collectors class.
+
+List<String> strings = Stream.of("appsquadz", "noida", "delhi", "gurugram", "Meerut")
+        .collect(Collectors.toList());
+
+However, the same process doesn't work on streams of primitives.
+//Compilation Error !!
+IntStream.of(1,2,3,4,5)
+        .collect(Collectors.toList());
+
+To convert a stream of primitives, we must first box the elements in their wrapper classes and then collect the wrapped objects in a collection. This type of stream is called boxed stream.
+
+2. IntStream (Stream of int)
+
+Example to convert int stream to List of Integers.
+
+List<Integer> ints = IntStream.of(1,2,3,4,5)
+        .boxed()
+        .collect(Collectors.toList());
+
+System.out.println(ints);
+
+IntStream.of(1,2,3,4,5)
+    .collect(Collectors.toList());
+
+To convert a stream of primitives, we must first box the elements in their wrapper classes
+and then collect the wrapped objects in a collection. This type of stream is called boxed
+stream.
+
+2. IntStream (Stream of int)
+
+Example to convert int stream to List of Integers.
+
+List<Integer> ints = IntStream.of(1,2,3,4,5)
+    .boxed()
+    .collect(Collectors.toList());
+
+System.out.println(ints);
+
+//Stream operations directly
+Optional<Integer> max = IntStream.of(1,2,3,4,5)
+
+    .boxed()
+    .max(Integer::compareTo);
+
+System.out.println(max);
+
+3. LongStream (Stream of long)
+
+Example to convert long stream to List of Longs.
+List<Long> longs = LongStream.of(11,21,31,41,51)
+    .boxed()
+    .collect(Collectors.toList());
+
+System.out.println(longs);
+
+4. DoubleStream (Stream of double)
+
+Example to convert double stream to List of Doubles.
+List<Double> doubles = DoubleStream.of(1d,2d,3d,4d,5d)
+    .boxed()
+    .collect(Collectors.toList());
+
+System.out.println(doubles);

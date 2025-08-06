@@ -4,6 +4,8 @@ public class EvenOddCheck {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);  // Scanner object to take input
 
+        
+
         System.out.print("Enter a number: ");
         int number = sc.nextInt();  // Taking integer input from user
 
