@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Student</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .container { 
+      max-width: 500px; 
+      margin: 20px auto; 
+      background: #fff; 
+      padding: 25px; 
+      border-radius: 10px; 
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    label { 
+      display: block; 
+      margin-top: 15px;
+      font-weight: bold;
+      color: #34495e;
+    }
+    input, button, select { 
+      width: 100%; 
+      padding: 10px; 
+      margin-top: 5px; 
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input:focus {
+      border-color: #3498db;
+      outline: none;
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+    button { 
+      background: #27ae60; 
+      color: #fff; 
+      border: none; 
+      cursor: pointer; 
+      font-size: 16px;
+      padding: 12px;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    button:hover { 
+      background: #219653; 
+    }
+    .error { 
+      color: #e74c3c; 
+      font-size: 0.85em;
+      margin-top: 5px;
+      height: 18px;
+    }
+    fieldset {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 15px;
+    }
+    legend {
+      padding: 0 10px;
+      font-weight: bold;
+      color: #34495e;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .photo-preview {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+      display: none;
+    }
+    .required:after {
+      content: " *";
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Add New Student</h1>
+  <form action="add-student" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label class="required">Student ID</label>
+      <input type="text" name="studentId" maxlength="20" required 
+             placeholder="Enter student ID" title="20 characters maximum"/>
+      <div id="idError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label class="required">Student Name</label>
+      <input type="text" name="studentName" maxlength="100" required 
+             placeholder="Enter full name" title="100 characters maximum"/>
+      <div id="nameError" class="error"></div>
+    </div>
+
+    <fieldset>
+      <legend>Marks (0-100)</legend>
+      <div class="form-group">
+        <label class="required">Computer</label>
+        <input type="number" name="computer" min="0" max="100" required 
+               placeholder="Enter marks" title="Must be between 0-100"/>
+      </div>
+      <div class="form-group">
+        <label class="required">English</label>
+        <input type="number" name="english" min="0" max="100" required 
+               placeholder="Enter marks" title="Must be between 0-100"/>
+      </div>
+      <div class="form-group">
+        <label class="required">Science</label>
+        <input type="number" name="science" min="0" max="100" required 
+               placeholder="Enter marks" title="Must be between 0-100"/>
+      </div>
+      <div class="form-group">
+        <label class="required">Math</label>
+        <input type="number" name="math" min="0" max="100" required 
+               placeholder="Enter marks" title="Must be between 0-100"/>
+      </div>
+      <div class="form-group">
+        <label class="required">Art</label>
+        <input type="number" name="art" min="0" max="100" required 
+               placeholder="Enter marks" title="Must be between 0-100"/>
+      </div>
+      <div class="form-group">
+        <label class="required">Hindi</label>
+        <input type="number" name="hindi" min="0" max="100" required 
+               placeholder="Enter marks" title="Must be between 0-100"/>
+      </div>
+    </fieldset>
+
+    <div class="form-group">
+      <label>Photo (JPEG/PNG, max 5MB)</label>
+      <input type="file" name="photo" accept="image/jpeg,image/png" 
+             onchange="previewPhoto(event)"/>
+      <img id="photoPreview" class="photo-preview" alt="Photo preview"/>
+      <div id="photoError" class="error"></div>
+    </div>
+
+    <button type="submit">Save Student</button>
+  </form>
+</div>
+
+<script>
+function validateForm() {
+    let isValid = true;
+    
+    // Clear previous errors
+    document.querySelectorAll('.error').forEach(el => el.textContent = '');
+    
+    // Validate Student ID
+    const studentId = document.getElementsByName("studentId")[0].value.trim();
+    if (studentId.length > 20) {
+        document.getElementById("idError").textContent = "ID must be 20 characters or less";
+        isValid = false;
+    }
+
+    // Validate Student Name
+    const studentName = document.getElementsByName("studentName")[0].value.trim();
+    if (studentName.length > 100) {
+        document.getElementById("nameError").textContent = "Name must be 100 characters or less";
+        isValid = false;
+    }
+
+    // Validate Photo
+    const photo = document.getElementsByName("photo")[0].files[0];
+    if (photo) {
+        const validTypes = ['image/jpeg', 'image/png'];
+        if (!validTypes.includes(photo.type)) {
+            document.getElementById("photoError").textContent = "Only JPEG/PNG images allowed";
+            isValid = false;
+        }
+        if (photo.size > 5 * 1024 * 1024) {
+            document.getElementById("photoError").textContent = "Photo must be less than 5MB";
+            isValid = false;
+        }
+    }
+
+    // Validate Marks (client-side)
+    const marksInputs = document.querySelectorAll('input[type="number"]');
+    marksInputs.forEach(input => {
+        const value = parseInt(input.value);
+        if (isNaN(value) {
+            isValid = false;
+        } else if (value < 0 || value > 100) {
+            isValid = false;
+        }
+    });
+
+    if (!isValid) {
+        alert("Please correct the errors in the form before submitting.");
+    }
+
+    return isValid;
+}
+
+function previewPhoto(event) {
+    const input = event.target;
+    const preview = document.getElementById('photoPreview');
+    
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            preview.style.display = 'block';
+            preview.src = e.target.result;
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        preview.style.display = 'none';
+        preview.src = '';
+    }
+}
+</script>
+</body>
+</html>

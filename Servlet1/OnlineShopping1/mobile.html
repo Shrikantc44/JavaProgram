@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mobile Shop</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        text-align: center;
+    }
+
+    .product {
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        transition: 0.3s;
+    }
+
+    .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .btn-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    input[type="submit"] {
+        background: #2c3e50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background: #1a252f;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form method="post" action="mobiles">
+        <h2>Mobiles</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/mobile1.jpg" alt="iPhone 5c">
+                <label><input type="checkbox" name="mobile" value="iphone"> iPhone 5c</label>
+            </div>
+            <div class="product">
+                <img src="images/mobile2.jpg" alt="Galaxy Note 2">
+                <label><input type="checkbox" name="mobile" value="note2"> Galaxy Note 2</label>
+            </div>
+            <div class="product">
+                <img src="images/mobile3.jpg" alt="Xperia Z2">
+                <label><input type="checkbox" name="mobile" value="Xperia"> Xperia Z2</label>
+            </div>
+            <div class="product">
+                <img src="images/mobile4.jpg" alt="Moto G">
+                <label><input type="checkbox" name="mobile" value="MotoG"> Moto G</label>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <input type="submit" name="buy" value="Buy Now">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

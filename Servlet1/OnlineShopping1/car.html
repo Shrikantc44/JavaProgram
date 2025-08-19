@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Car Shop - ABC Shopping</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+        background: linear-gradient(135deg, #ece9e6, #ffffff);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #1a237e;
+        margin-bottom: 20px;
+    }
+
+    .car-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .car-card {
+        background: #f9f9f9;
+        padding: 15px;
+        text-align: center;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #ddd;
+    }
+
+    .car-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .car-card img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .car-name {
+        display: block;
+        margin-top: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .btn-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    input[type="submit"] {
+        background: #1a237e;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background: #0d174d;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🚗 Car Shop</h2>
+    <form method="post" action="cars">
+        <div class="car-grid">
+            <label class="car-card">
+                <img src="images/car1.jpg" alt="Porsche">
+                <input type="checkbox" name="car" value="Porsche">
+                <span class="car-name">Porsche</span>
+            </label>
+
+            <label class="car-card">
+                <img src="images/car2.jpg" alt="Lamborghini">
+                <input type="checkbox" name="car" value="Lamborghini">
+                <span class="car-name">Lamborghini</span>
+            </label>
+
+            <label class="car-card">
+                <img src="images/car3.jpg" alt="Bugatti Veyron">
+                <input type="checkbox" name="car" value="Bugatti Veyron">
+                <span class="car-name">Bugatti Veyron</span>
+            </label>
+
+            <label class="car-card">
+                <img src="images/car4.jpg" alt="Spyder">
+                <input type="checkbox" name="car" value="Spyder">
+                <span class="car-name">Spyder</span>
+            </label>
+        </div>
+
+        <div class="btn-container">
+            <input type="submit" name="buy" value="Buy Now">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

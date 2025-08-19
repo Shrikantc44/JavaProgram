@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome User</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #d4fc79, #96e6a1);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 80px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        padding: 12px;
+        background: #4CAF50;
+        color: white;
+        border-radius: 8px;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .menu a:hover {
+        background: #45a049;
+        transform: scale(1.05);
+    }
+
+    .logout {
+        background: #e74c3c !important;
+    }
+
+    .logout:hover {
+        background: #c0392b !important;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome User</h2>
+    <div class="menu">
+        <a href="mobile.html">Mobile</a>
+        <a href="laptop.html">Laptop</a>
+        <a href="car.html">Car</a>
+        <a href="watches.html">Watches</a>
+        <a href="men.html">Men Formals</a>
+        <a href="women.html">Women Formals</a>
+        <a href="cart">See the Cart</a>
+        <a href="logout" class="logout">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

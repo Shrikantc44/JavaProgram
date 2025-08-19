@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome User - ABC Shopping</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+        background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        background: white;
+        margin-top: 50px;
+        padding: 25px 35px;
+        border-radius: 15px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+        width: 300px;
+        animation: fadeIn 1s ease-in-out;
+        text-align: center;
+    }
+
+    h2 {
+        color: #ff6f61;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        background: #ff6f61;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .menu a:hover {
+        background: #e65c50;
+        transform: translateY(-2px);
+    }
+
+    .logout {
+        background: #999;
+    }
+
+    .logout:hover {
+        background: #777;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome, User!</h2>
+    <div class="menu">
+        <a href="mobile.html">📱 Mobile</a>
+        <a href="laptop.html">💻 Laptop</a>
+        <a href="car.html">🚗 Car</a>
+        <a href="watches.html">⌚ Watches</a>
+        <a href="men.html">👔 Men Formals</a>
+        <a href="women.html">👗 Women Formals</a>
+        <a href="cart">🛒 See the Cart</a>
+        <a href="logout" class="logout">🚪 Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

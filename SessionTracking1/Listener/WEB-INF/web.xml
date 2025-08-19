@@ -1,0 +1,55 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>ListenerServlet</servlet-name>
+        <servlet-class>ListenerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListenerServlet</servlet-name>
+        <url-pattern>/listener1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RequestListenerServlet</servlet-name>
+        <servlet-class>RequestListenerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RequestListenerServlet</servlet-name>
+        <url-pattern>/listener2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionListenerServlet</servlet-name>
+        <servlet-class>SessionListenerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SessionListenerServlet</servlet-name>
+        <url-pattern>/listener3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Logout</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/log</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>MyListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>MySessionListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>MyRequestListener</listener-class>
+    </listener>
+
+</web-app>

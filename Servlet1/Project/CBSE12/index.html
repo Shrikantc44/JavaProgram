@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result Search</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: url('cbse.jpg') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .header {
+        background: #00c2cb;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        width: 380px;
+        text-align: center;
+        margin: 40px auto;
+    }
+    label { display:block; text-align:left; margin-bottom:6px; color:#333; font-weight:600; }
+    input[type="text"]{
+        width:100%; padding:10px; border-radius:6px; border:1px solid #ccc; margin-bottom:14px;
+    }
+    .btn { padding:10px 18px; border:none; border-radius:6px; cursor:pointer; font-weight:600; }
+    .search { background:#007bff; color:#fff; margin-right:10px; }
+    .reset  { background:#dc3545; color:#fff; }
+</style>
+</head>
+<body>
+  <div class="header">Senior School Certificate Examination Results 2025</div>
+
+  <div class="container">
+    <h2>Search Result</h2>
+    <form action="result" method="POST">
+      <label for="roll">Enter Your Roll Number:</label>
+      <input type="text" id="roll" name="roll_no" required>
+
+      <button type="submit" class="btn search">Search</button>
+      <button type="reset" class="btn reset">Reset</button>
+    </form>
+  </div>
+</body>
+</html>

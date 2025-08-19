@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Net Banking - ABC Shopping</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+        background: linear-gradient(135deg, #f8f9fa, #e0f7fa);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 60px auto;
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #00796b;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    input[type="submit"], input[type="reset"], .cancel-btn {
+        background: #00796b;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover, .cancel-btn:hover {
+        background: #004d40;
+    }
+
+    .cancel-btn {
+        background: #f44336;
+    }
+
+    .cancel-btn:hover {
+        background: #c62828;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🏦 Net Banking</h2>
+    <form action="bank" method="post">
+        <label>Name on Card</label>
+        <input type="text" name="name" placeholder="Enter the name on the card" required>
+
+        <label>Card Number</label>
+        <input type="text" name="cardno" placeholder="Enter your card number" required>
+
+        <label>Bank Name</label>
+        <input type="text" name="bankname" placeholder="Enter your bank name" required>
+
+        <div class="btn-container">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <a href="welcome.html" class="cancel-btn">Cancel</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

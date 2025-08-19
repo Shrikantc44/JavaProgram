@@ -1,0 +1,17 @@
+javax.servlet.AsyncContext is an interface introduced in Servlet 3.0. AsyncContext has the 
+role to start asynchronous context within a servlet using HttpServletRequest.startAsync() 
+method. We can divide our task for asynchronous execution. Within a servlet, some of the task 
+can be performed by another servlet or jsp and some of the task can be done by parent servlet 
+itself and finally response will be sent collectively. AsyncContext is started by Request 
+object as below
+
+AsyncContext asyncContext = request.startAsync();
+
+We can also set the timeout for asynchronous context. For the example we scan set indefinite 
+timeout by setting it as 0.
+--------------------------------------------------------------
+
+To divide the task of parent servlet I am calling a jsp which will execute other task. For 
+this AsyncContext provides dispatch() method. We can use it as below
+
+asyncContext.dispatch("/asynctest.jsp");

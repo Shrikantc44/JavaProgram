@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Cookies</title>
+</head>
+<body>
+    <p>Are Cookies Enabled In Your Browser?</p>
+    <button onclick="myFunction()">Try it!</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            const status = navigator.cookieEnabled ? "Yes ✅" : "No ❌";
+            document.getElementById("demo").innerHTML = "Cookies Enabled: " + status;
+        }
+    </script>
+</body>
+</html>

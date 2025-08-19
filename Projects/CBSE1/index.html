@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CBSE Result Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #0275d8;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 450px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #0275d8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #025aa5;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        CENTRAL BOARD OF SECONDARY EDUCATION  
+    </div>
+
+    <div class="container">
+        <h2>Check Your Result</h2>
+        <form action="checkResult" method="get">
+            <label for="roll">Roll Number</label>
+            <input type="text" id="roll" name="roll" placeholder="Enter Roll Number" required>
+            <input type="submit" value="Check Result">
+        </form>
+    </div>
+
+    <div class="footer">
+        © 2025 CBSE Result Portal
+    </div>
+
+</body>
+</html>

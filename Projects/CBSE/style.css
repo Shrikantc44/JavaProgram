@@ -1,0 +1,64 @@
+/* styles.css */
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f2f7ff, #ffffff);
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 700px;
+  margin: 48px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+header p { margin: 0 0 18px; color: #555; }
+.roll-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.roll-form label { display:none; }
+.roll-form input[type="text"] {
+  flex:1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7e6;
+  font-size: 16px;
+}
+.roll-form button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #2b6ef6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.roll-form button:hover { opacity: 0.95; }
+.note { margin-top: 12px; color: #666; }
+footer { text-align: center; margin-top: 18px; color: #777; font-size: 13px; }
+
+/* Table styling that servlet will output */
+.result-table {
+  width:100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+.result-table th, .result-table td {
+  border: 1px solid #e1e6f0;
+  padding: 10px;
+  text-align: center;
+}
+.result-table th {
+  background: #f6f9ff;
+}
+.passed { color: green; font-weight:700; }
+.failed { color: red; font-weight:700; }

@@ -1,0 +1,75 @@
+import javax.servlet.http.*;
+import javax.servlet.*;
+import java.io.*;
+import java.sql.*;
+
+public class AllStudentsServlet extends HttpServlet {
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
+
+        // Start HTML
+        out.println("<!DOCTYPE html>");
+        out.println("<html><head><title>All Students - CodeSquadz India</title>");
+        out.println("<link rel='stylesheet' href='style.css'>");
+        out.println("<style>");
+        out.println("table { border-collapse: collapse; width: 90%; margin: auto; font-size: 16px; background-color: rgba(255,255,255,0.9); }");
+        out.println("th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }");
+        out.println("th { background-color: #0d6efd; color: white; }");
+        out.println("h1 { text-align: center; color: #00ffff; }");
+        out.println("</style></head><body>");
+
+        out.println("<h1>CodeSquadz India</h1>");
+        out.println("<h2 style='text-align:center;'>📋 All Student Records</h2>");
+
+        try {
+            // Load driver and connect
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection conn = DriverManager.getConnection(
+                "jdbc:oracle:thin:@localhost:1521:xe", "system", "GodOfWarOracle3119");
+
+            String query = "SELECT * FROM cbse_students";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+
+            // Print table
+            out.println("<table>");
+            out.println("<tr>");
+            out.println("<th>Student ID</th>");
+            out.println("<th>Name</th>");
+            out.println("<th>Computer</th>");
+            out.println("<th>English</th>");
+            out.println("<th>Science</th>");
+            out.println("<th>Math</th>");
+            out.println("<th>Art</th>");
+            out.println("<th>Hindi</th>");
+            out.println("</tr>");
+
+            while (rs.next()) {
+                out.println("<tr>");
+                out.println("<td>" + rs.getString("student_id") + "</td>");
+                out.println("<td>" + rs.getString("student_name") + "</td>");
+                out.println("<td>" + rs.getInt("computer") + "</td>");
+                out.println("<td>" + rs.getInt("english") + "</td>");
+                out.println("<td>" + rs.getInt("science") + "</td>");
+                out.println("<td>" + rs.getInt("math") + "</td>");
+                out.println("<td>" + rs.getInt("art") + "</td>");
+                out.println("<td>" + rs.getInt("hindi") + "</td>");
+                out.println("</tr>");
+            }
+
+            out.println("</table>");
+            conn.close();
+        } catch (Exception e) {
+            out.println("<p style='color:red; text-align:center;'>⚠️ Error loading student data.</p>");
+            e.printStackTrace(out);
+        }
+
+        out.println("<div style='text-align:center; margin-top: 30px;'>");
+        out.println("<button onclick=\"window.location.href='index.html'\">Back to Home</button>");
+        out.println("</div>");
+
+        out.println("</body></html>");
+        out.close();
+    }
+}

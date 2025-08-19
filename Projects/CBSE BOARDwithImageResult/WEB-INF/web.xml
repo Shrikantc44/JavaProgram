@@ -1,0 +1,52 @@
+	<!-- WebContent/WEB-INF/web.xml -->
+	<web-app >
+
+	  <servlet>
+		<servlet-name>AddStudentServlet</servlet-name>
+		<servlet-class>AddStudentServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		<servlet-name>AddStudentServlet</servlet-name>
+		<url-pattern>/add-student</url-pattern>
+	  </servlet-mapping>
+
+	  <servlet>
+		<servlet-name>StudentPhotoServlet</servlet-name>
+		<servlet-class>StudentPhotoServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		<servlet-name>StudentPhotoServlet</servlet-name>
+		<url-pattern>/photo</url-pattern>
+	  </servlet-mapping>
+
+	  <servlet>
+		<servlet-name>ResultStudentServlet</servlet-name>
+		<servlet-class>ResultStudentServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		<servlet-name>ResultStudentServlet</servlet-name>
+		<url-pattern>/result</url-pattern>
+	  </servlet-mapping>
+
+	  <servlet>
+		<servlet-name>AllStudentsServlet</servlet-name>
+		<servlet-class>AllStudentsServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		<servlet-name>AllStudentsServlet</servlet-name>
+		<url-pattern>/all-students</url-pattern>
+	  </servlet-mapping>
+
+	  <servlet>
+		<servlet-name>ErrorServlet</servlet-name>
+		<servlet-class>ErrorServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		<servlet-name>ErrorServlet</servlet-name>
+		<url-pattern>/error</url-pattern>
+	  </servlet-mapping>
+
+	  <session-config>
+		<session-timeout>30</session-timeout>
+	  </session-config>
+	</web-app>

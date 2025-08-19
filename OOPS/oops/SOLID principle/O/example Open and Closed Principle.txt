@@ -1,0 +1,44 @@
+Now that we have covered the basics of the principle, let's apply it to our Invoice application.
+
+Let's say our boss came to us and said that they want invoices to be saved to a database so that we can search
+them easily. We think okay, this is easy peasy boss, just give me a second!
+
+We create the database, connect to it, and we add a save method to our InvoicePersistence class:
+
+public class InvoicePersistence{
+    Invoice invoice;
+	
+	public InvoicePersistence(Invoice invoice){
+	    this.invoice = invoice;
+	}
+	
+	public void saveToFile(String filename){
+	   //Creates a file with given name and writes the invoice
+	}
+	
+	public void saveToDatabase(){
+	   //Saves the invoice to database
+	}
+}
+if our class design obeyed the Open-Closed principle we would not need to change this class.
+
+interface InvoicePersistence{
+      public void save(Invoice invoice);
+}
+
+We change the type of InvoicePersistence to Interface and add a save method. Each persistence class will
+implement this save method.
+
+public class DatabasePersistence implements InvoicePersistence{
+
+     public void save(Invoice invoice){
+	        //Save to DB
+	 }
+}
+
+public class FilePersistence implements InvoicePersistence{
+
+   public void save(Invoice invoice){
+       //Save to file
+   }
+}

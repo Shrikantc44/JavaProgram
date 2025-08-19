@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Women Shop</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+    }
+    .shop-container {
+        text-align: center;
+    }
+    table {
+        margin: auto;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    td {
+        padding: 15px;
+    }
+    img {
+        width: 120px;
+        height: auto;
+        border-radius: 8px;
+    }
+    input[type="submit"] {
+        padding: 8px 16px;
+        border: none;
+        background-color: #d81b60;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #880e4f;
+    }
+</style>
+</head>
+<body>
+
+<div class="shop-container">
+    <form method="post" action="women">
+        <table border="1" cellspacing="0" cellpadding="0">
+            <tr>
+                <td colspan="2" align="center"><h2>👗 Women Section</h2></td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <img src="images/women1.jpg" alt="Gucci Dress"><br>
+                    <input type="checkbox" name="women" value="Gucci"> Gucci
+                </td>
+                <td align="center">
+                    <img src="images/women2.jpg" alt="Forever21 Dress"><br>
+                    <input type="checkbox" name="women" value="forever21"> Forever21
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <img src="images/women3.jpg" alt="Levis Dress"><br>
+                    <input type="checkbox" name="women" value="levis"> Levis
+                </td>
+                <td align="center">
+                    <img src="images/women4.jpg" alt="Louis Philippe Dress"><br>
+                    <input type="checkbox" name="women" value="louisphilippe"> Louis Philippe
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="buy" value="Buy Now">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

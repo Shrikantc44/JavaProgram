@@ -1,0 +1,73 @@
+<web-app>
+  <servlet>
+    <servlet-name>Mp3Servlet</servlet-name>
+    <servlet-class>Mp3Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Mp3Servlet</servlet-name>
+    <url-pattern>/mp3</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ImageServlet</servlet-name>
+    <servlet-class>ImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageServlet</servlet-name>
+    <url-pattern>/img</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PdfServlet</servlet-name>
+    <servlet-class>PdfServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PdfServlet</servlet-name>
+    <url-pattern>/pdf</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>WordServlet</servlet-name>
+    <servlet-class>WordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WordServlet</servlet-name>
+    <url-pattern>/word</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ExcelServlet</servlet-name>
+    <servlet-class>ExcelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExcelServlet</servlet-name>
+    <url-pattern>/excel</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ExcelServlet1</servlet-name>
+    <servlet-class>ExcelServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExcelServlet1</servlet-name>
+    <url-pattern>/excel1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RefreshServlet</servlet-name>
+    <servlet-class>RefreshServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RefreshServlet</servlet-name>
+    <url-pattern>/refresh</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RefreshServlet1</servlet-name>
+    <servlet-class>RefreshServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RefreshServlet1</servlet-name>
+    <url-pattern>/refresh1</url-pattern>
+  </servlet-mapping>
+</web-app>

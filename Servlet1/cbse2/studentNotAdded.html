@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error - CodeSquadz India</title>
+    <link rel="stylesheet" href="style.css"> <!-- Common CSS file -->
+    <style>
+        .error-message {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4d4d;
+            margin-bottom: 20px;
+        }
+
+        .error-box button {
+            width: auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #dc3545;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .error-box button:hover {
+            background-color: #b02a37;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CodeSquadz India</h1>
+
+    <div class="box error-box">
+        <div class="error-message">
+            ❌ Student not added! Please try again.
+        </div>
+
+        <div style="text-align: center;">
+            <button onclick="window.location.href='addStudent.html'">Try Again</button>
+        </div>
+    </div>
+
+</body>
+</html>

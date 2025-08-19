@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login - ABC Shopping</title>
+<style>
+    body {
+        font-family: 'Calibri', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* Login Box */
+    .login-container {
+        background: white;
+        margin-top: 50px;
+        padding: 25px 35px;
+        border-radius: 15px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+        width: 320px;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .login-container h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    .login-container input[type="submit"] {
+        background: #ff6f61;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .login-container input[type="submit"]:hover {
+        background: #e65c50;
+    }
+
+    .links {
+        margin-top: 15px;
+    }
+
+    .links a {
+        color: #0077b6;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Navigation Links */
+    .nav-links {
+        margin-top: 30px;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        background: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+        color: #333;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        background: #ff6f61;
+        color: white;
+    }
+
+    /* Marquee */
+    .marquee {
+        margin-top: 30px;
+        background: #333;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .marquee font {
+        margin-right: 20px;
+    }
+
+    .marquee img {
+        height: 60px;
+        border-radius: 8px;
+        margin-left: 15px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+    window.history.forward();
+    function noBack() { window.history.forward(); }
+</script>
+</head>
+
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();">
+
+<!-- Login Form -->
+<div class="login-container">
+    <h2>Login</h2>
+    <form method="post" action="login">
+        <input type="checkbox" name="cooky" value="yes"/> Stay signed in
+        <input type="text" name="userId" placeholder="Enter Username" required>
+        <input type="password" name="pass" placeholder="Enter Password" required>
+        <input type="submit" name="login" value="Login">
+        <div class="links">
+            <a href="register.html">Registration</a>
+        </div>
+    </form>
+</div>
+
+<!-- Navigation -->
+<div class="nav-links">
+    <a href="mobile.html">Mobile Shopping</a>
+    <a href="laptop.html">Laptop Shopping</a>
+    <a href="car.html">Car Shopping</a>
+    <a href="watch.html">Watch Shopping</a>
+    <a href="men.html">Men Formals</a>
+    <a href="women.html">Women Formals</a>
+</div>
+
+<!-- Marquee -->
+<div class="marquee">
+    <marquee>
+        <font size="5" color="red" face="verdana">ABC Shopping Site</font>
+        <img src="images/mobile.jpg" alt="Mobile">
+        <img src="images/watch.jpg" alt="Watch">
+        <img src="images/car.jpg" alt="Car">
+        <img src="images/laptop.jpg" alt="Laptop">
+        <img src="images/men.jpg" alt="Men">
+        <img src="images/women.jpg" alt="Women">
+    </marquee>
+</div>
+
+</body>
+</html>

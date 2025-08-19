@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Women Shop</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fef8f8;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+    h2 {
+        color: #d6336c;
+    }
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        max-width: 600px;
+        margin: auto;
+    }
+    .product {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .product img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .product label {
+        display: block;
+        margin-top: 8px;
+        font-weight: bold;
+        color: #555;
+    }
+    .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #d6336c;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .btn:hover {
+        background-color: #b32d5b;
+    }
+</style>
+</head>
+<body>
+
+<h2>Women Section</h2>
+<form method="post" action="women">
+    <div class="product-grid">
+        <div class="product">
+            <img src="images/women1.jpg" alt="Gucci">
+            <label><input type="checkbox" name="women" value="Gucci"> Gucci</label>
+        </div>
+        <div class="product">
+            <img src="images/women2.jpg" alt="Forever21">
+            <label><input type="checkbox" name="women" value="forever21"> Forever21</label>
+        </div>
+        <div class="product">
+            <img src="images/women3.jpg" alt="Levis">
+            <label><input type="checkbox" name="women" value="levis"> Levis</label>
+        </div>
+        <div class="product">
+            <img src="images/women4.jpg" alt="Louis Philippe">
+            <label><input type="checkbox" name="women" value="louisphilippe"> Louis Philippe</label>
+        </div>
+    </div>
+    <button type="submit" name="buy" class="btn">Buy Now</button>
+</form>
+
+</body>
+</html>

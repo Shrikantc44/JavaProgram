@@ -1,0 +1,99 @@
+/* Reset box-sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Body with background image and default font */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://t4.ftcdn.net/jpg/07/06/78/87/240_F_706788755_dfUEAAFlJ0rV41H8remn4mJFTGWSiMne.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+}
+
+/* Common heading style */
+h1 {
+    background-color: rgba(13, 110, 253, 0.9);
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Reusable container/box style */
+.box, .form-box, .count-box {
+    background-color: rgca(255, 255, 255, 0.1);
+    border: 2px solid #0d6efd;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+button, input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Special red button (e.g., for delete) */
+input.delete-btn {
+    background-color: #dc3545;
+}
+
+input.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Input fields */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Flex row layout for label + input */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 130px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: white;
+    text-align: left;
+}
+
+/* Student count display */
+.count-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00ffcc;
+    margin-top: 10px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration - ABC Shopping</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+        background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        background: white;
+        padding: 25px 35px;
+        border-radius: 15px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+        width: 350px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+        text-align: center;
+        color: #ff6f61;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: border 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: #ff6f61;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .gender-options {
+        margin-top: 5px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    .btn {
+        width: 48%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn-submit {
+        background: #ff6f61;
+    }
+
+    .btn-submit:hover {
+        background: #e65c50;
+    }
+
+    .btn-reset {
+        background: #999;
+    }
+
+    .btn-reset:hover {
+        background: #777;
+    }
+
+    .link {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        color: #0077b6;
+        text-decoration: none;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration</h2>
+    <form method="post" action="register">
+        <label>User Id</label>
+        <input type="text" name="userId" placeholder="Enter First Name" required>
+
+        <label>Phone</label>
+        <input type="text" name="t2" placeholder="Enter your phone number" required>
+
+        <label>Password</label>
+        <input type="password" name="pass" placeholder="Enter password" required>
+
+        <label>Re-enter Password</label>
+        <input type="password" name="repass" placeholder="Re-enter password" required>
+
+        <label>Address</label>
+        <textarea rows="3" name="ta" placeholder="Enter your address" required></textarea>
+
+        <label>Gender</label>
+        <div class="gender-options">
+            <input type="radio" value="Male" name="r1" required> Male
+            <input type="radio" value="Female" name="r1"> Female
+        </div>
+
+        <label>Date of Birth</label>
+        <input type="date" name="tt" required>
+
+        <div style="margin-top:15px; display:flex; justify-content:space-between;">
+            <button type="submit" class="btn btn-submit">Submit</button>
+            <button type="reset" class="btn btn-reset">Reset</button>
+        </div>
+
+        <a href="index.html" class="link">Already Registered? Login Now</a>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - ABC Shopping</title>
+<style>
+    body {
+        font-family: Calibri, Arial, sans-serif;
+        background: linear-gradient(135deg, #f0f4f8, #d9f0ff);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 60px auto;
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #00796b;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .btn-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    input[type="submit"] {
+        background: #00796b;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background: #004d40;
+    }
+
+    .links {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .links a {
+        color: #00796b;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+
+    marquee {
+        margin-top: 30px;
+    }
+
+    marquee img {
+        height: 50px;
+        margin: 0 10px;
+    }
+</style>
+<script>
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
+</script>
+</head>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();">
+
+<div class="container">
+    <form method="post" action="login">
+        <h2>Login</h2>
+
+        <label>
+            <input type="checkbox" name="cooky" value="yes"> Stay signed in
+        </label>
+
+        <label>Username</label>
+        <input type="text" name="userId" required>
+
+        <label>Password</label>
+        <input type="password" name="pass" required>
+
+        <div class="btn-container">
+            <input type="submit" name="login" value="Login">
+        </div>
+
+        <div class="links">
+            <a href="register.html">Registration</a>
+            <a href="mobile.html">Mobile Shopping</a>
+            <a href="laptop.html">Laptop Shopping</a>
+            <a href="car.html">Car Shopping</a>
+            <a href="watch.html">Watch Shopping</a>
+            <a href="men.html">Men Formals</a>
+            <a href="women.html">Women Formals</a>
+        </div>
+    </form>
+</div>
+
+<marquee>
+    <font size="5" color="red" face="verdana">ABC Shopping Site</font>
+    <img src="images/mobile.jpg">
+    <img src="images/watch.jpg">
+    <img src="images/car.jpg">
+    <img src="images/laptop.jpg">
+    <img src="images/men.jpg">
+    <img src="images/women.jpg">
+</marquee>
+
+</body>
+</html>

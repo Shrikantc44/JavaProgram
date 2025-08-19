@@ -1,0 +1,75 @@
+<web-app>
+	<servlet>
+		<servlet-name>AddStudentServlet</servlet-name>
+		<servlet-class>AddStudentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AddStudentServlet</servlet-name>
+		<url-pattern>/addStudent</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ErrorServlet</servlet-name>
+		<servlet-class>ErrorServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ErrorServlet</servlet-name>
+		<url-pattern>/error</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PercentageStudentServlet</servlet-name>
+		<servlet-class>PercentageStudentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>PercentageStudentServlet</servlet-name>
+		<url-pattern>/percentage</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ResultPercentageServlet</servlet-name>
+		<servlet-class>ResultPercentageServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ResultPercentageServlet</servlet-name>
+		<url-pattern>/percentageResult</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>AllStudentsServlet</servlet-name>
+		<servlet-class>AllStudentsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AllStudentsServlet</servlet-name>
+		<url-pattern>/totalNoStudents</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>UpdateStudentServlet</servlet-name>
+		<servlet-class>UpdateStudentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateStudentServlet</servlet-name>
+		<url-pattern>/updateStudent</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>DeleteStudentServlet</servlet-name>
+		<servlet-class>DeleteStudentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteStudentServlet</servlet-name>
+		<url-pattern>/deleteStudent</url-pattern>
+	</servlet-mapping>
+</web-app>

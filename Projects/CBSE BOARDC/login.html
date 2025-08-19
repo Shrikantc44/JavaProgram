@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Student Portal - CodeSquadz India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CodeSquadz CBSE</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="nav">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="parallax-content">
+                    <h1>Welcome to CBSE Student Portal</h1>
+                    <p>Manage student records, marks, and performance with our comprehensive system</p>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <a href="addStudent.html" class="dashboard-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Add Student</h3>
+                    <p>Register new students in the system</p>
+                </a>
+
+                <a href="searchStudent.html" class="dashboard-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Search Student</h3>
+                    <p>Find student records and percentages</p>
+                </a>
+
+                <a href="totalNoStudents" class="dashboard-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Total Students</h3>
+                    <p>View all registered students</p>
+                </a>
+
+                <a href="updateStudent.html" class="dashboard-card">
+                    <i class="fas fa-edit"></i>
+                    <h3>Update Student</h3>
+                    <p>Modify student information</p>
+                </a>
+
+                <a href="deleteStudent.html" class="dashboard-card">
+                    <i class="fas fa-user-minus"></i>
+                    <h3>Delete Student</h3>
+                    <p>Remove student records</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 CodeSquadz India. All rights reserved.</p>
+            <p>CBSE Student Management System</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const nav = document.getElementById('nav');
+
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>CodeSquadz India - Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CodeSquadz India</h1>
+
+    <div class="box">
+        <button onclick="location.href='addStudent.html'">Add Student</button>
+        <button onclick="location.href='searchStudent.html'">Search Student Percentage Marks</button>
+        <button onclick="location.href='totalNoStudents'">Total No Of Students</button>
+        <button onclick="location.href='updateStudent.html'">Update Student</button>
+        <button onclick="location.href='deleteStudent.html'">Delete Student</button>
+    </div>
+
+</body>
+</html>

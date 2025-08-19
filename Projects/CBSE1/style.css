@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #0078d7;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #005a9e;
+}
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.result-table th, .result-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.result-table th {
+    background-color: #f2f2f2;
+}
+.passed {
+    color: green;
+    font-weight: bold;
+}
+.failed {
+    color: red;
+    font-weight: bold;
+}

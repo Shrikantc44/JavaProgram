@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Net Banking</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+        text-align: center;
+        color: #00796b;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #004d40;
+        display: block;
+        margin-top: 15px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #b2dfdb;
+        border-radius: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="text"]:focus {
+        border-color: #00796b;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0,121,107,0.5);
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        background: #00796b;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 48%;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background: #004d40;
+    }
+
+    .cancel-link {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        text-decoration: none;
+        color: #00796b;
+        font-weight: bold;
+    }
+
+    .cancel-link:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form action="bank" method="post">
+        <h2>Net Banking</h2>
+
+        <label for="name">Name on Card</label>
+        <input type="text" id="name" name="name" placeholder="Enter the name on the card" required>
+
+        <label for="cardno">Card Number</label>
+        <input type="text" id="cardno" name="cardno" placeholder="Enter your card number" required>
+
+        <label for="bankname">Bank Name</label>
+        <input type="text" id="bankname" name="bankname" placeholder="Enter your bank name" required>
+
+        <div class="btn-group">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+        <a href="welcome.html" class="cancel-link">Cancel</a>
+    </form>
+</div>
+
+</body>
+</html>

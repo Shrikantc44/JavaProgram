@@ -1,0 +1,67 @@
+HTTP Status Codes
+
+Status Codes are used by the client application to know the status of a request processing in 
+the server. The status code has 3 digit numbers, where the first digit defines the class of 
+the response.
+The Status code are of 5 categories namely:
+
+    1XX - Informational  
+    2XX - Success  
+    3XX - Redirection  
+    4XX - Client Error  
+    5XX - Server Error  
+
+Informational Codes ->
+Code    Message  
+100     Continue  
+101     Switching Protocols  
+
+Success Codes ->
+Code    Message  
+200     OK  
+201     Created  
+202     Accepted  
+203     Non-Authoritative Information  
+204     No Content  
+205     Reset Content  
+206     Partial Content  
+
+Redirection Codes ->
+Code    Message  
+300     Multiple Choices  
+301     Moved Permanently  
+302     Found  
+303     See Other  
+304     Not Modified  
+305     Use Proxy  
+307     Temporary Redirect  
+
+Client Error Codes ->
+Code    Message  
+400     Bad Request  
+401     Unauthorized  
+402     Payment Required  
+403     Forbidden  
+404     Not Found  
+405     Methods Not Allowed  
+406     Not Acceptable  
+407     Proxy Authentication Required  
+408     Request Time-Out  
+409     Conflict  
+410     Gone  
+411     Length Required  
+412     Precondition Failed  
+413     Request Entity Too Large  
+414     Request-URI Too Large  
+415     Unsupported Media Type  
+416     Requested range not satisfy able  
+417     Exceptional Failed  
+
+Server Error Codes ->
+Code    Message  
+500     Internal Server Error  
+501     Not Implemented  
+502     Bad Gateway  
+503     Service Unavailable  
+504     Gateway Time-Out  
+505     HTTP Version not supported  

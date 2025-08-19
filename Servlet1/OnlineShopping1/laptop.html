@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Laptop Shop</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #0d47a1;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        text-align: center;
+    }
+
+    .product {
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        transition: 0.3s;
+    }
+
+    .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .btn-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    input[type="submit"] {
+        background: #0d47a1;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background: #08306b;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form method="post" action="laptops">
+        <h2>Laptops</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/laptop1.jpg" alt="Dell Alienware">
+                <label><input type="checkbox" name="laptop" value="DellAlienware"> Dell Alienware</label>
+            </div>
+            <div class="product">
+                <img src="images/laptop2.jpg" alt="IBM">
+                <label><input type="checkbox" name="laptop" value="IBM"> IBM</label>
+            </div>
+            <div class="product">
+                <img src="images/laptop3.jpg" alt="HP">
+                <label><input type="checkbox" name="laptop" value="HP"> HP</label>
+            </div>
+            <div class="product">
+                <img src="images/laptop4.jpg" alt="Mac">
+                <label><input type="checkbox" name="laptop" value="Mac"> Mac</label>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <input type="submit" name="buy" value="Buy Now">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

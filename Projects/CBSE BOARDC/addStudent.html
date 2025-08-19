@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student - CodeSquadz India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .full-width {
+            grid-column: span 2;
+        }
+        
+        .photo-preview {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            display: block;
+            margin: 0 auto 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Add Student</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title"><i class="fas fa-user-plus"></i> Register New Student</h2>
+                
+                <form action="addStudent" method="post" enctype="multipart/form-data" id="studentForm">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <img id="photoPreview" class="photo-preview" src="https://via.placeholder.com/120" alt="Student Photo Preview">
+                            <label for="photo">Student Photo</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentId">Student ID *</label>
+                            <input type="text" id="studentId" name="studentId" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentName">Student Name *</label>
+                            <input type="text" id="studentName" name="studentName" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="computer">Computer Marks *</label>
+                            <input type="number" id="computer" name="computer" min="0" max="100" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="english">English Marks *</label>
+                            <input type="number" id="english" name="english" min="0" max="100" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="science">Science Marks *</label>
+                            <input type="number" id="science" name="science" min="0" max="100" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="math">Math Marks *</label>
+                            <input type="number" id="math" name="math" min="0" max="100" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="art">Art Marks *</label>
+                            <input type="number" id="art" name="art" min="0" max="100" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hindi">Hindi Marks *</label>
+                            <input type="number" id="hindi" name="hindi" min="0" max="100" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-block">
+                                <i class="fas fa-save"></i> Save Student
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 CodeSquadz India. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Photo preview functionality
+        const photoInput = document.getElementById('photo');
+        const photoPreview = document.getElementById('photoPreview');
+        
+        photoInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    photoPreview.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Form validation
+        document.getElementById('studentForm').addEventListener('submit', function(e) {
+            const marksInputs = document.querySelectorAll('input[type="number"]');
+            let isValid = true;
+            
+            marksInputs.forEach(input => {
+                const value = parseInt(input.value);
+                if (isNaN(value) || value < 0 || value > 100) {
+                    input.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+            });
+            
+            if (!isValid) {
+                e.preventDefault();
+                alert('Please enter valid marks between 0 and 100 for all subjects');
+            }
+        });
+    </script>
+</body>
+</html>
