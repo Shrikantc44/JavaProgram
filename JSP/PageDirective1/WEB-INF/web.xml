@@ -1,0 +1,22 @@
+
+<web-app >
+
+    <display-name>ImportJSPExample</display-name>
+
+    <!-- Servlet Mapping for JSP -->
+    <servlet>
+        <servlet-name>importJsp</servlet-name>
+        <jsp-file>/import.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>importJsp</servlet-name>
+        <url-pattern>/import</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>import.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

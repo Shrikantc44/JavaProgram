@@ -1,0 +1,16 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>ifPage</servlet-name>
+        <jsp-file>/if.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ifPage</servlet-name>
+        <url-pattern>/run</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>if.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
