@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "students.dtd">
+<students>
+    <student course = "J2ee">
+        <id>1001</id>
+        <name>Raj</name>
+        <fee>10000</fee>
+    </student>
+
+    <student course = ".Net">
+        <id>1002</id>
+        <name>Raman</name>
+        <fee>7000</fee>
+    </student>
+</students>

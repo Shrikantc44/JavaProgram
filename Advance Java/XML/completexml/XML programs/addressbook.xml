@@ -1,0 +1,20 @@
+<?xml version = "1.0" ?>
+<?xml-stylesheet type = "text/css" href = "Addressc.css" ?>
+<!DOCTYPE addressbook SYSTEM "Addressd.dtd">
+
+<addressbook>
+  <contact>
+    <Name>lalu yadav </Name>
+    <address>pagalkhana</address>
+    <city>patna</city>
+    <state>bihar</state>
+    <zip>700091</zip>
+    <phone>
+      <voice>012345678</voice>
+      <fax>012345678</fax>
+    </phone>
+    <email>lalu@lalutimes.com</email>
+    <web>http://www.lalutimes.com</web>
+    <company>CharaGhotala no1</company>
+  </contact>
+</addressbook>

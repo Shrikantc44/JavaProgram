@@ -1,0 +1,35 @@
+contact {
+  display: block;
+  width: 400px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 5px double black;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+}
+
+name {
+  display: block;
+  font-family: Times, serif;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+address {
+  display: block;
+  font-family: Times, serif;
+  font-size: 20pt;
+}
+
+city, state, zip {
+  display: block;
+  font-family: Times, serif;
+  font-size: 16pt;
+}
+
+phone, email, web, company {
+  display: block;
+  font-family: Times, serif;
+  font-size: 14pt;
+}

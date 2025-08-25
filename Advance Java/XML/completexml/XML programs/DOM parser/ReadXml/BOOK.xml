@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book SYSTEM "book.dtd">
+<book>
+    <chapter>
+        <chapNum>one</chapNum>
+        <chapTitle>introduction to j2ee</chapTitle>
+    </chapter>
+    <chapter>
+        <chapNum>two</chapNum>
+        <chapTitle>introduction to awt</chapTitle>
+    </chapter>
+</book>

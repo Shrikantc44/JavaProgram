@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<school>
+<Student id="1">
+<firstname>Shrikant</firstname>
+<lastname>Chauhan</lastname>
+<email>abc@gmail.com</email>
+<phone>123456789</phone>
+</Student>
+</school>

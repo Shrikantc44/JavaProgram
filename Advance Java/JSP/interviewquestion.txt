@@ -1,0 +1,135 @@
+🔹 Basic JSP Interview Questions
+
+What is JSP? How is it different from Servlet?
+
+Explain the JSP lifecycle.
+
+What are the advantages of JSP over Servlets?
+
+Difference between JSP and HTML?
+
+What is the difference between static and dynamic web pages?
+
+🔹 JSP Directives
+
+What are JSP directives? Name different types.
+
+Difference between include directive and include action?
+
+What is the use of <%@ page %> directive?
+
+What are different attributes of page directive in JSP?
+
+What is the difference between <%@ include %> and <jsp:include %>?
+
+🔹 JSP Scripting Elements
+
+What are JSP scripting elements?
+
+Difference between declaration (<%! %>), scriptlet (<% %>), and expression (<%= %>) in JSP?
+
+How to handle exceptions in JSP?
+
+What is the difference between JSP expression language (EL) and scriptlets?
+
+What is the use of JSTL in JSP?
+
+🔹 Implicit Objects in JSP
+
+What are implicit objects in JSP?
+
+List all 9 implicit objects available in JSP.
+
+Difference between request and session implicit objects?
+
+What is the difference between pageContext and application objects?
+
+How is out implicit object different from response.getWriter()?
+
+🔹 JSP Scopes & Session Management
+
+What are different scopes available in JSP?
+
+Difference between page, request, session, and application scope?
+
+How is session management handled in JSP?
+
+Difference between getSession(true) and getSession(false)?
+
+How to disable session in JSP?
+
+🔹 Advanced JSP
+
+What is the use of <jsp:useBean> action tag?
+
+Difference between <jsp:forward> and sendRedirect()?
+
+What are custom tags in JSP?
+
+What are JSP EL (Expression Language) features?
+
+What is the difference between JSP and JSF (JavaServer Faces)?
+What is the difference between JSP and JSF (JavaServer Faces)?
+
+--------------------------------------------------------------------------
+
+🔹 JSP Machine Round Practical Questions
+📌 Basics & Directives
+
+Write a JSP page that prints the current date and time.
+
+Write a JSP program to display “Hello, [username]” where the username is taken from a request parameter.
+
+Demonstrate the difference between <%@ include %> directive and <jsp:include> action with example JSPs.
+
+Write a JSP page that uses a page directive to set contentType to text/html and errorPage to error.jsp.
+
+Write a JSP program that uses <%! %> declaration to define a method and call it inside <% %> scriptlet.
+
+📌 Implicit Objects & Form Handling
+
+Create a JSP page that takes name and email from an HTML form and displays them using request.getParameter().
+
+Write a JSP program to count how many times a user has visited the page using session implicit object.
+
+Demonstrate the use of application scope by storing a value globally and retrieving it from multiple JSPs.
+
+Write a JSP that displays the IP address and browser details of the client using request implicit object.
+
+Create a JSP page that forwards the request to another JSP using <jsp:forward> tag.
+
+📌 Session & Cookies
+
+Write a JSP program to create a session and display the session ID.
+
+Create a JSP that stores username in a cookie and retrieves it when the user revisits.
+
+Write a JSP program to invalidate a session when the user clicks on "Logout".
+
+Demonstrate the difference between session scope and application scope with a working JSP.
+
+Write a JSP page that tracks the number of active users using application scope.
+
+📌 Database Integration
+
+Write a JSP program to connect to a MySQL database and display all records from the students table.
+
+Create a login form using JSP + JDBC where username and password are validated from the database.
+
+Write a JSP program to insert form data into a database table using PreparedStatement.
+
+Write a JSP application to display student details in an HTML table format from a database.
+
+Write a JSP page to update and delete records from the database.
+
+📌 Error Handling & Advanced
+
+Write a JSP program that handles exceptions using errorPage and isErrorPage.
+
+Create a JSP page that demonstrates the use of Expression Language (EL) to display request and session attributes.
+
+Write a JSP page that uses JSTL <c:forEach> tag to display a list of items.
+
+Write a custom JSP tag handler to print a welcome message.
+
+Create a JSP program to upload a file from the client system and save it on the server.

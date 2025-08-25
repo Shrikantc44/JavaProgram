@@ -1,0 +1,70 @@
+What is the design pattern?
+
+If a problem occurs over and over again, a solution to that problem has been used effectively. That solution is described as a pattern. The design patterns are language-independent strategies for solving common object-oriented design problems. When you make a design, you should know the names of some common solutions. Learning design patterns is good for people to communicate each other effectively. SUN suggests GOF (Gang Of Four—four pioneer guys who wrote a book named "Design Patterns"—Elements of Reusable Object-Oriented Software).
+
+"Pattern" as the name suggests, means series of events occurring in a definite order. The patterns can be found in Java and J2ee technologies also. Many a times, we find that there is a particular way of tackling a problem. This way is easy and has been used many times successfully by a number of people earlier also. This method becomes a pattern.
+
+Learning the design patterns is a multiple step process:
+
+Acceptance
+
+Recognition
+
+Internalization
+
+"Design patterns are recurring solutions to design problems."
+Design Patterns are very popular among software developers. A design pattern is a well described solution to a common software problem.
+
+Some of the benefits of using design patterns are:
+
+Design Patterns are already defined and provides industry standard approach to solve a recurring problem
+
+It saves time if we sensibly use the design pattern
+
+Using design patterns promotes reusability that leads to more robust and highly maintainable code.
+
+It helps in reducing total cost of ownership (TCO) of the software product.
+
+Since design patterns are already defined, it makes our code easy to understand and debug.
+
+It leads to faster development and new members of team understand it easily.
+
+According to commonly known practices, there are 23 design patterns in Java. These patterns are grouped under three heads:
+
+Creational Patterns
+
+Structural Patterns
+
+Behavioral Patterns
+
+Patterns
+
+Creational Patterns ->
+Factory Pattern
+Abstract Factory Pattern
+Singleton Pattern
+Builder Pattern
+Prototype Pattern
+
+Structural Patterns --->
+Adapter Pattern
+Bridge Pattern
+Composite Pattern
+Decorator Pattern
+Facade Pattern
+Flyweight Pattern
+Proxy Pattern
+
+Behavioral Patterns ->
+
+Chain of Responsibility Pattern
+Command Pattern
+Interpreter Pattern
+Iterator Pattern
+Mediator Pattern
+Momento Pattern
+Observer Pattern
+State Pattern
+Strategy Pattern
+Template Pattern
+Visitor Pattern

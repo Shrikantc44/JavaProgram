@@ -1,0 +1,3 @@
+Normalize the root element of the XML document. This ensures that all Text nodes under the 
+root node are put into a "normal" form, which means that there are neither adjacent Text 
+nodes nor empty Text nodes in the document.

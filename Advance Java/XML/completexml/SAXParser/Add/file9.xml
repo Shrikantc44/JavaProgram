@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+  <staff id="4">
+    <firstname>lalu</firstname>
+    <nickname>bihari</nickname>
+    <salary>102</salary>
+    <age>28</age>
+  </staff>
+</company>
+

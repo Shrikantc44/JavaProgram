@@ -1,0 +1,18 @@
+<?xml version = "1.0" ?>
+<!DOCTYPE addressbook SYSTEM "Addressd.dtd">
+<addressbook>
+  <contact>
+    <Name> A.N. Mukerjee </Name>
+    <address>SDF Bldgs 219-222</address>
+    <city>salt lake</city>
+    <state>WB</state>
+    <zip>700091</zip>
+    <phone>
+      <voice>033-3692287</voice>
+      <fax>033-3628638</fax>
+    </phone>
+    <email>cheta@codesquadz.com</email>
+    <web>http://www.codesquadz.com</web>
+    <company>TCS</company>
+  </contact>
+</addressbook>

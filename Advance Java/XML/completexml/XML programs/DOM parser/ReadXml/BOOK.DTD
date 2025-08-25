@@ -1,0 +1,4 @@
+<!ELEMENT book (chapter+)>
+<!ELEMENT chapter (chapNum, chapTitle)>
+<!ELEMENT chapNum (#PCDATA)>
+<!ELEMENT chapTitle (#PCDATA)>
