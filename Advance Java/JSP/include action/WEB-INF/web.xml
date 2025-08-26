@@ -1,0 +1,9 @@
+
+<web-app>
+
+    <!-- Optional: Define a welcome page -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

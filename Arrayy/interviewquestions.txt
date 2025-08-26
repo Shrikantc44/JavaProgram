@@ -1,0 +1,86 @@
+🔥 Most Important Array Coding Questions in Java (Machine Round)
+1. Basic Level
+
+Find the largest element in an array.
+
+Find the second largest element in an array (without sorting).
+
+Find the smallest and second smallest element in an array.
+
+Find the sum of all elements in an array.
+
+Find the average of array elements.
+
+Reverse an array (in-place without extra array).
+
+Copy all elements of one array into another.
+
+2. Intermediate Level
+
+Find the frequency of each element in an array.
+
+Check if two arrays are equal or not.
+
+Find the missing number in an array (1 to n series).
+
+Find the duplicate elements in an array.
+
+Remove duplicate elements from an array.
+
+Find the maximum product of two integers in an array.
+
+Find the pair of elements whose sum is equal to a given number (Two Sum Problem).
+
+Rotate array by k positions (left/right rotation).
+
+3. Advanced / Tricky Level
+
+Find the subarray with maximum sum (Kadane’s Algorithm).
+
+Find the subarray with given sum (sliding window approach).
+
+Find the majority element (appears more than n/2 times).
+
+Find the intersection of two arrays.
+
+Find the union of two arrays.
+
+Sort an array of 0s, 1s, and 2s without using sorting algorithm (Dutch National Flag problem).
+
+Find the first repeating element in an array.
+
+Find the first non-repeating element in an array.
+
+Rearrange array in alternating positive and negative numbers.
+
+Find the longest consecutive sequence in an unsorted array.
+
+4. Practical/Trick Questions
+
+Merge two sorted arrays into one sorted array.
+
+Find kth largest / kth smallest element in an array.
+
+Move all zeroes to the end of the array (without changing order).
+
+Count how many times a number appears in a sorted array (Binary Search approach).
+
+Find the equilibrium index (where left sum = right sum).
+
+👉 Inme se most commonly pooche jane wale machine round ke questions hai:
+
+Second largest element
+
+Missing number
+
+Find duplicates / remove duplicates
+
+Two sum problem
+
+Rotate array
+
+Maximum subarray sum (Kadane’s Algo)
+
+Sort 0,1,2
+
+Move zeros to end

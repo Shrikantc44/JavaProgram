@@ -1,0 +1,58 @@
+🔹 Basic Level (Warm-up)
+
+Reverse a String – Without using built-in methods.
+
+Check Palindrome – Example: "madam", "racecar".
+
+Count Vowels and Consonants in a given string.
+
+Remove Whitespaces from a string without using trim().
+
+Remove Duplicate Characters from a string.
+
+🔹 Intermediate Level
+
+Find the First Non-Repeating Character in a string.
+👉 Example: "swiss" → output: "w".
+
+Count Occurrences of Each Character in a string (using HashMap).
+
+Check Anagram – Example: "listen" & "silent".
+
+Find Duplicate Words in a sentence.
+
+Find Longest Word in a Sentence.
+
+🔹 Advanced / Machine Round Level
+
+Reverse Words in a Sentence – Input: "Java is fun" → Output: "fun is Java".
+
+Longest Palindromic Substring – Input: "babad" → Output: "bab" or "aba".
+
+String Compression – Example: "aaabbccc" → "a3b2c3".
+
+Check if a Rotation of Another String – Example: "waterbottle" is rotation of "erbottlewat".
+
+Check Subsequence – Whether one string is subsequence of another.
+
+Find All Permutations of a String.
+
+Implement strStr() (like indexOf function) without using built-in methods.
+
+Longest Common Prefix – Given an array of strings.
+
+Check Balanced Parentheses using stack.
+
+Word Break Problem – Check if a string can be segmented into valid dictionary words.
+
+🔹 Java-Specific String Questions
+
+Difference between String, StringBuilder, and StringBuffer.
+
+Why String is immutable in Java?
+
+How == and .equals() behave for Strings?
+
+What is String Pool / Interning?
+
+Performance impact of using + operator vs StringBuilder in loops.
